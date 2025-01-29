@@ -6,7 +6,11 @@ const app = express()
 app.use(cors())
 app.options('*', cors())
 
-const port = 4100
+const port = 4000
+
+app.get('/', (req, res) => {
+  res.send('你好')
+})
 
 app.get('/test', (req, res) => {
   class weChaty {
